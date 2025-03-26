@@ -9,6 +9,7 @@ html,
 body {
     width: 100%;
     height: 100%;
+    background-color: #000;
 }
 
 
@@ -39,6 +40,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    transition: opacity 1.5s ease-in-out;
 }
 
 /* Chaque slide occupe tout l'écran et est superposée */
@@ -68,7 +70,9 @@ body {
 /* Animation de zoom appliquée lors de l'activation */
 /* L'animation démarre à scale(1) pour créer l'effet de zoom progressif */
 .slide.active img {
-    animation: zoom 5s ease-in-out forwards;
+    animation: zoom 10s ease-in-out forwards;
+    animation-delay: 0s;
+    /* Assure que l'animation commence immédiatement lorsque la classe active est appliquée */
 }
 
 @keyframes zoom {
@@ -91,4 +95,48 @@ body {
     font-size: 1.5rem;
     color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Styles pour le bouton de redirection */
+#button-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in-out, visibility 0s linear 1.5s;
+    z-index: 500;
+}
+
+#button-container.visible {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1.5s ease-in-out, visibility 0s;
+}
+
+.redirect-button {
+    display: inline-block;
+    padding: 16px 40px;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 2px solid #fff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.redirect-button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
 }
