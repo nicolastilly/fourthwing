@@ -124,7 +124,7 @@ body {
 
 /* Animation de zoom appliquée lors de l'activation */
 .slide.active img {
-    animation: zoom 5s ease-in-out forwards;
+    animation: zoom 10s ease-in-out forwards;
     animation-delay: 0s;
     /* Assure que l'animation commence immédiatement */
 }
