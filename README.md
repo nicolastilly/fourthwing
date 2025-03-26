@@ -4,7 +4,6 @@ Ce prototype est un projet en 5UX dans la thématique "livre numérique". Il pr�
 
 ### Fonctionnement du prototype
 
-- Loading (animation vidéo) qui disparaît une fois terminée
-- 4 écrans avec des textes qui servent de synopsis en intro de l'histoire
-- Un bouton lire apparaît après les 4 écrans pour ouvrir la page d'histoire avec le scroll
-- Page de lecture avec le scroll
+- Loading (animation vidéo) puis bouton pour lancer le synopsis
+- 4 slides avec des textes qui présentent le synopsis en intro de l'histoire. La redirection vers la page lecture est automatique
+- La page de lecture avec du scroll avec des images et du texte
