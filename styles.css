@@ -33,6 +33,18 @@ body {
     visibility: hidden;
     transition: opacity 1.5s ease-in-out, visibility 0s linear 1.5s;
     z-index: 500;
+    animation: slide-top 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation-delay: 6s;
+}
+
+@keyframes slide-top {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50px);
+    }
 }
 
 #button-container.visible {
